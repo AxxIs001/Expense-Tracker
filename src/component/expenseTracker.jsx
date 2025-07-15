@@ -1,5 +1,13 @@
+import React, { useState } from "react";
+
 const ExpenseTracker = () => {
-  //const categories = [""]
+
+const [category, setCategory] = useState("")
+
+const categories = {
+  income: ["Salary", "Bonus", "Interest", "Gift"],
+  expense: ["Food", "Transport", "Rent", "Entertainment", "Utilities"],
+};
 
   return (
     <div className="flex flex-col h-full items-center w-[500px] border-black border-[1px] bg-gray-100 rounded-lg shadow-lg p-4 ">
@@ -12,9 +20,7 @@ const ExpenseTracker = () => {
           <option value="expense">Expense</option>
         </select>
         <select className="border p-2 rounded">
-          <option value="">Category</option>
-
-          
+          <option value=""> Category</option>    
         </select>
            <input
           type="number"
